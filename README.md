@@ -1,4 +1,4 @@
-# Role Name
+# Ansible role for Docker Engine
 
 This role installs Docker Engine on Ubuntu 14.04 and 16.04
 
