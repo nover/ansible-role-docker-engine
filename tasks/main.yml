@@ -23,16 +23,16 @@
       state=present
       version=1.1.0
 
-- name: Add docker apt repo
-  apt_repository:
-      repo='deb https://apt.dockerproject.org/repo ubuntu-{{ ansible_distribution_release }} main'
-      state=present
-
 - name: Import the Docker repository key
   apt_key:
       url=https://apt.dockerproject.org/gpg
       state=present
       id=2C52609D
+
+- name: Add docker apt repo
+  apt_repository:
+      repo='deb https://apt.dockerproject.org/repo ubuntu-{{ ansible_distribution_release }} main'
+      state=present
 
 - name: Install Docker package
   apt: 
