@@ -24,18 +24,23 @@
 
 - name: Import the Docker repository key
   apt_key:
-      url=https://apt.dockerproject.org/gpg
+      url=https://download.docker.com/linux/ubuntu/gpg
       state=present
-      id=2C52609D
+      id=0EBFCD88
 
 - name: Add docker apt repo
   apt_repository:
-      repo='deb https://apt.dockerproject.org/repo ubuntu-{{ ansible_distribution_release }} main'
+      repo='deb [arch=amd64] https://download.docker.com/linux/ubuntu ubuntu-{{ ansible_distribution_release }} stable'
       state=present
+
+- name: Ensure old engines are removed
+  apt:
+      name=docker-engine
+      state=absent
 
 - name: Install Docker package
   apt: 
-      name=docker-engine
+      name=docker-ce
       update_cache=yes
 
 - name: Create a docker group
