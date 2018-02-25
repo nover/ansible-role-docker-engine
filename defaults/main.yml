@@ -4,3 +4,7 @@
 #    - '-H tcp://0.0.0.0:2375'
 docker_users:
     - 'docker'
+
+
+# the architecture of docker engine to install
+arch: 'amd64'

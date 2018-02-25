@@ -8,7 +8,7 @@ No Requirements
 
 ## Role Variables
 
-No variables to configure, simply installs Docker Engine
+ - `arch` - the system architecture to install for, valid values are `amd64` and `armhf`
 
 ## Dependencies
 
