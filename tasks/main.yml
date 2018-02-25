@@ -30,7 +30,7 @@
 
 - name: Add docker apt repo
   apt_repository:
-      repo='deb [arch={{ arch }}] https://download.docker.com/linux/{{ ansible_lsb.id | lower }} {{ ansible_distribution_release | lower }} stable'
+      repo='deb [arch={{ docker_arch }}] https://download.docker.com/linux/{{ ansible_lsb.id | lower }} {{ ansible_distribution_release | lower }} {{ docker_channel }}'
       state=present
 
 - name: Ensure old engines are removed

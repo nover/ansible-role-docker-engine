@@ -7,4 +7,6 @@ docker_users:
 
 
 # the architecture of docker engine to install
-arch: 'amd64'
+docker_arch: 'amd64'
+# the channel - stable or edge
+docker_channel: 'stable'

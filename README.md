@@ -8,7 +8,8 @@ No Requirements
 
 ## Role Variables
 
- - `arch` - the system architecture to install for, valid values are `amd64` and `armhf`
+ - `docker_arch` - the system architecture to install for, valid values are `amd64` and `armhf`
+ - `docker_channel` - the docker ce channel to use, valid values are `stable` and `edge`
 
 ## Dependencies
 
