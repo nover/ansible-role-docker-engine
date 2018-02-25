@@ -1,6 +1,6 @@
 # Ansible role for Docker Engine
 
-This role installs Docker Engine on Ubuntu 14.04 and 16.04
+This role installs Docker Engine on Ubuntu 14.04, 16.04 and Debian Stretch variants
 
 ## Requirements
 
