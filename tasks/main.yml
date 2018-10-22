@@ -12,10 +12,7 @@
   with_items: 
       - python-dev
       - python-setuptools
-
-- name: Install pip
-  easy_install: 
-      name=pip 
+      - python-pip
 
 - name: Install docker-py
   pip: 
